@@ -11,11 +11,11 @@ function App() {
     <div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Menu</li>
+          <li><a>Home</a></li>
+          <li><a>Menu</a></li>
           <img src={bean} alt='coffee'/>
-          <li>Locations</li>
-          <li>About Us</li>
+          <li><a>Locations</a></li>
+          <li><a>About Us</a></li>
         </ul>
       </nav>
       <div className='firstSection'>
