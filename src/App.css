@@ -60,7 +60,149 @@ nav ul li:hover::after {
   width: 100%;
 }
 
+/* Banner slideshow */
+
+.firstSection {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
 
 .mySlides img {
   width: 100%;
+  height: 500px;
+}
+
+.numberText {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: aliceblue;
+  padding: 8px;
+  background-color: rgba(195, 195, 195, 0.533);
+}
+
+.text {
+  background-color: rgba(195, 195, 195, 0.499);
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 22px;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.next, .prev {
+  cursor: pointer;
+  padding: 15px;
+  margin-top: -28px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  color: azure;
+  background-color: #7c7c84;
+  border-radius: 0 3px 3px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next:hover, .prev:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* The dots */
+
+.dots {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: aqua;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #0d0040;
+}
+
+/* fading animation */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Second Section */
+
+.secondSection {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+
+.cubeInfo img {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+}
+
+.cubeInfo {
+  display: flex;
+  width: 210px;
+  height: 210px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cubeInfo h5 {
+  z-index: 10;
+  color: white;
+  font-size: medium;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Third Section */
+
+.thirdSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.thirdSection h2 {
+  position: absolute;
+  margin: 0;
+}
+
+.thirdSection img {
+  width: 100%;
+}
+
+
+/* mobile exception */
+
+@media only screen and (max-width: 1050px) {
+  
 }
