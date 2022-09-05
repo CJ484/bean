@@ -195,7 +195,7 @@ nav ul li:hover::after {
   background-color: #ffcc8d;
   border-radius: 15px;
   padding: 13px;
-  display: flex;
+  position: relative;
   max-width: 900px;
   margin-bottom: 20px;
   transition: width 0.5s ease-in-out;
@@ -243,10 +243,10 @@ nav ul li:hover::after {
   font-size: medium;
   margin: 0;
   max-width: 200px;
-  z-index: 7;
+  z-index: 1;
   text-align: right;
-  display: flex;
-  float: right;
+  position: absolute;
+  right: 20px;
 }
 
 /* .test:hover + .textBox {
