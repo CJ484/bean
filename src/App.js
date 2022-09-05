@@ -8,7 +8,8 @@ import localArtist from "./Images/anotherOpenMic.jpg"
 import bake from "./Images/bakeContest.jpg"
 import culture from "./Images/worldCoffee.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faChevronLeft, fa } from "@fortawesome/free-solid-svg-icons"
+import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React, { useEffect } from 'react';
 
 let i;
@@ -53,54 +54,88 @@ function App() {
   useIt();
   return (
     <div>
+      <div className="social">
+        <h6>Catch us on Social Media:</h6>
+        <a><FontAwesomeIcon icon={faFacebook} /></a>
+        <a><FontAwesomeIcon icon={faInstagram}/></a>
+        <a><FontAwesomeIcon icon={faTwitter}/></a>
+        <a><FontAwesomeIcon icon={faTiktok}/></a>
+      </div>
       <nav>
         <ul>
-          <li><a>Home</a></li>
-          <li><a>Menu</a></li>
-          <img src={bean} alt='coffee'/>
-          <li><a>Locations</a></li>
-          <li><a>About Us</a></li>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Menu</a>
+          </li>
+          <img src={bean} alt="coffee" />
+          <li>
+            <a>Locations</a>
+          </li>
+          <li>
+            <a>About Us</a>
+          </li>
         </ul>
       </nav>
-      <div className='firstSection'>
-        <div className='mySlides fade'>
-          <div className='numberText'>1 / 3</div>
-          <img src={buy3} alt='buy3get1'/>
-          <h3 className='text'>Nobody likes monday's so we made it better</h3>
+      <div className="firstSection">
+        <div className="mySlides fade">
+          <div className="numberText">1 / 3</div>
+          <img src={buy3} alt="buy3get1" />
+          <h3 className="text">Nobody likes monday's so we made it better</h3>
         </div>
-        <div className='mySlides fade'>
-          <div className='numberText'>2 / 3</div>
-          <img src={music} alt='liveMusic'/>
-          <h3 className='text'>Sit back and relax to the music</h3>
+        <div className="mySlides fade">
+          <div className="numberText">2 / 3</div>
+          <img src={music} alt="liveMusic" />
+          <h3 className="text">Sit back and relax to the music</h3>
         </div>
-        <div className='mySlides fade'>
-          <div className='numberText'>3 / 3</div>
-          <img src={mic} alt='openMic'/>
-          <h3 className='text'>Show us your talent tonight</h3>
+        <div className="mySlides fade">
+          <div className="numberText">3 / 3</div>
+          <img src={mic} alt="openMic" />
+          <h3 className="text">Show us your talent tonight</h3>
         </div>
-        <a className='prev' onClick={() => plusSlides(-1)}><FontAwesomeIcon icon={faChevronLeft}/></a>
-        <a className='next' onClick={() => plusSlides(1)}><FontAwesomeIcon icon={faChevronRight}/></a>
+        <a className="prev" onClick={() => plusSlides(-1)}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </a>
+        <a className="next" onClick={() => plusSlides(1)}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </a>
       </div>
-      <div className='dots'>
-        <span className='dot' onClick={() => currentSlide(1)}></span>
-        <span className='dot' onClick={() => currentSlide(2)}></span>
-        <span className='dot' onClick={() => currentSlide(3)}></span>
+      <div className="dots">
+        <span className="dot" onClick={() => currentSlide(1)}></span>
+        <span className="dot" onClick={() => currentSlide(2)}></span>
+        <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
-      <div className='secondSection'>
-        <div className='cubeInfo'>
-          <h5>Local Artist</h5>
-          <img src={localArtist} alt='local artist singing' />
+      <div className="secondSection">
+        <div className="test">
+          <div className="cubeInfo">
+            <h5>Local Artist</h5>
+            <img src={localArtist} alt="local artist singing" />
+          </div>
+          <h6 className="textBox">
+            All local artist are welcome to sign up to bring your talent to the
+            rest of our local community
+          </h6>
         </div>
-        <div className='cubeInfo'>
-          <img src={bake} alt="Backing contest" />
-          <h5>Bake Contest</h5>
+        <div className="test">
+          <div className="cubeInfo">
+            <img src={bake} alt="Backing contest" />
+            <h5>Bake Contest</h5>
+          </div>
+          <h6 className="textBox">
+            Every Thursday we invite all bakers to bring there aprons and
+            measuring cups to go for the chance of a winning prize of $200.
+            Bring your best dessert!
+          </h6>
         </div>
-        <div className='cubeInfo'>
-          <h5>Private Conference</h5>
-          <img src={conferance} alt="Studying conferance table" />
+        <div className="test">
+          <div className="cubeInfo">
+            <h5>Private Conference</h5>
+            <img src={conferance} alt="Studying conferance table" />
+          </div>
         </div>
       </div>
-      <div className='thirdSection'>
+      <div className="thirdSection">
         <img src={culture} alt="Diverse coffee from around the world" />
         <h2>Bringing the world to you, We bring different variety</h2>
       </div>

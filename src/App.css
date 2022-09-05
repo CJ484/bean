@@ -1,10 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
 
 body {
-  background-color: #7c7c84;
+  /* background-color: #ffeeda; */
+  background-position-y: 17% ;
+  background-image: url('/src/Images/coffeeBackground.jpg');
   color: black;
-  width: 60vw;
+  width: 100%;
   margin: 0 auto;
+}
+
+.social {
+  background-color: #986300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social h6 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.social a {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 15px;
+}
+
+.social a:hover {
+  color: #4267B2;
 }
 
 nav {
@@ -31,6 +56,7 @@ nav ul li {
   font-family: 'Catamaran' sans-serif;
   font-size: large;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 nav ul li,
@@ -46,14 +72,14 @@ nav ul li::after {
   right: 0;
   margin: auto;
   width: 0%;
-  height: 1px;
+  height: 3px;
   content: '.';
   color: transparent;
-  background: #d9e5f4;
+  background: #471e07;
 }
 
 nav ul li:hover {
-  color: #d9e5f4;
+  color: #471e07;
 }
 
 nav ul li:hover::after {
@@ -63,18 +89,23 @@ nav ul li:hover::after {
 /* Banner slideshow */
 
 .firstSection {
-  max-width: 800px;
+  width: 50%;
+  /* height: 600px; */
+  /* max-width: 800px; */
   position: relative;
-  margin: auto;
+  margin: 20px auto;
 }
 
 .mySlides {
   display: none;
+  border-radius: 20px;
 }
 
 .mySlides img {
   width: 100%;
-  height: 500px;
+  height: 600px;
+  border: #ffcc8d 6px solid;
+  border-radius: 20px;
 }
 
 .numberText {
@@ -84,6 +115,7 @@ nav ul li:hover::after {
   color: aliceblue;
   padding: 8px;
   background-color: rgba(195, 195, 195, 0.533);
+  border-radius: 20px 0 0 0;
 }
 
 .text {
@@ -93,8 +125,9 @@ nav ul li:hover::after {
   font-size: 22px;
   position: absolute;
   bottom: 4px;
-  width: 100%;
+  width: 101.2%;
   text-align: center;
+  border-radius: 0 0 20px 20px;
 }
 
 .next, .prev {
@@ -112,7 +145,7 @@ nav ul li:hover::after {
 }
 
 .next {
-  right: 0;
+  right: -12px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -131,7 +164,7 @@ nav ul li:hover::after {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  background-color: aqua;
+  background-color: rgb(255, 214, 9);
   margin: 0 2px;
   border-radius: 50%;
   display: inline-block;
@@ -154,7 +187,25 @@ nav ul li:hover::after {
 .secondSection {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 30px;
+  margin: 30px auto;
+  width: 65%;
+}
+
+.test {
+  background-color: #ffcc8d;
+  border-radius: 15px;
+  padding: 13px;
+  display: flex;
+  max-width: 900px;
+  margin-bottom: 20px;
+  transition: width 0.5s ease-in-out;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+.test:hover {
+  width: 540px;
 }
 
 .cubeInfo {
@@ -164,19 +215,43 @@ nav ul li:hover::after {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.cubeInfo img {
-  width: 300px;
-  height: 300px;
   position: absolute;
 }
 
+.cubeInfo img {
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 301px;
+  max-height: 301px;
+  position: absolute;
+  border-radius: 20px;
+  border: 4px solid #041f50;
+  transition:  0.5s;
+  z-index: 2;
+}
+
 .cubeInfo h5 {
-  z-index: 10;
+  z-index: 3;
   color: white;
   font-size: medium;
 }
+
+
+.textBox {
+  color: rgb(120, 75, 6);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  margin: 0;
+  max-width: 200px;
+  z-index: 7;
+  text-align: right;
+  display: flex;
+  float: right;
+}
+
+/* .test:hover + .textBox {
+  visibility: visible;
+} */
 
 @keyframes fade {
   from {opacity: .4}
@@ -189,24 +264,61 @@ nav ul li:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .thirdSection h2 {
   position: absolute;
   margin: 0;
+  font-size: 3rem;
+  color: #ecaf72;
 }
 
 .thirdSection img {
   width: 100%;
+  height: 480px;
+}
+
+/* Footer */
+
+footer {
+  margin: 0;
+  padding: 20px;
+  background-color:rgba(81, 45, 10, 0.988)
+}
+
+footer h5 {
+  margin: 0 0 0 60px;
 }
 
 
 /* mobile exception */
 
 @media only screen and (max-width: 1508px) {
+  
+  .test {
+    margin-bottom: 20px;
+  }
+
+  .cubeInfo {
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 201px;
+    max-height: 201px;
+    border-radius: 28px;
+  }
+
   .cubeInfo img {
     width: 200px;
     height: 200px;
+  }
+
+  .secondSection {
+    flex-direction: column;
+  }
+
+  .thirdSection h2 {
+    font-size: 1.5rem;
   }
 }
