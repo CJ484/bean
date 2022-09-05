@@ -56,10 +56,10 @@ function App() {
     <div>
       <div className="social">
         <h6>Catch us on Social Media:</h6>
-        <a><FontAwesomeIcon icon={faFacebook} /></a>
-        <a><FontAwesomeIcon icon={faInstagram}/></a>
-        <a><FontAwesomeIcon icon={faTwitter}/></a>
-        <a><FontAwesomeIcon icon={faTiktok}/></a>
+        <a data-hover="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a data-hover="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
+        <a data-hover="Twitter"><FontAwesomeIcon icon={faTwitter}/></a>
+        <a data-hover="TikTok"><FontAwesomeIcon icon={faTiktok}/></a>
       </div>
       <nav>
         <ul>
