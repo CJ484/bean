@@ -114,7 +114,7 @@ function App() {
           </div>
           <h6 className="textBox">
             All local artist are welcome to sign up to bring your talent to the
-            rest of our local community
+            rest of our local community!
           </h6>
         </div>
         <div className="test">
@@ -133,6 +133,11 @@ function App() {
             <h5>Private Conference</h5>
             <img src={conferance} alt="Studying conferance table" />
           </div>
+          <h6 className='textBox'>
+            Schedule your next study group or business meeting in our
+            large sitting table. Our stress free enviroment gives a change of scenary
+            to help a new perspective.
+          </h6>
         </div>
       </div>
       <div className="thirdSection">
