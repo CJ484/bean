@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Schoolbell&display=swap');
 
 body {
   /* background-color: #ffeeda; */
@@ -18,7 +19,8 @@ body {
 
 .social h6 {
   margin: 0;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
+  color: beige;
 }
 
 .social a {
@@ -26,6 +28,7 @@ body {
   cursor: pointer;
   transition: all ease-in-out 250ms;
   margin: 0 0 0 25px;
+  color: #fcd690;
 }
 
 .social a:before {
@@ -51,7 +54,7 @@ body {
 }
 
 .social a:hover {
-  color: #d1d1d1;
+  color: #d5a431;
 }
 
 nav {
@@ -63,6 +66,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* background-color: rgba(208, 182, 139, 0.541); */
 }
 
 nav ul img {
@@ -102,6 +106,7 @@ nav ul li::after {
 
 nav ul li:hover {
   color: #471e07;
+  background-color: rgba(213, 172, 114, 0.875);
 }
 
 nav ul li:hover::after {
@@ -125,7 +130,7 @@ nav ul li:hover::after {
 
 .mySlides img {
   width: 100%;
-  height: 600px;
+  height: 650px;
   border: #ffcc8d 6px solid;
   border-radius: 20px;
 }
@@ -265,7 +270,7 @@ nav ul li:hover::after {
 .cubeInfo h5 {
   z-index: 3;
   color: white;
-  font-size: medium;
+  font-size: x-large;
 }
 
 
@@ -314,6 +319,39 @@ nav ul li:hover::after {
 }
 
 /* Footer */
+
+.top-footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.top-footer * {
+  margin: 0 15px;
+}
+
+.top-footer h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  margin: 0;
+}
+
+.bean2 {
+  width: 275px;
+  height: 275px;
+}
+
+.map img {
+  width: 500px;
+  height: 270px;
+  margin: 0;
+}
+
+.wifiPic {
+  height: 28./ 0px;
+  width: 280px;
+  border-radius: 10px;
+}
 
 footer {
   margin: 0;
