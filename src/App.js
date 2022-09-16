@@ -185,7 +185,7 @@ function App() {
             <br/>
             <img
               // src={mic}
-              src="https://maps.googleapis.com/maps/api/staticmap?center=bay+shore+bean&zoom=13&scale=2&size=400x200&maptype=roadmap&format=png&key=AIzaSyBTLbndbhLDlrOli-PuNIND4wcqf8M6ywg&markers=size:mid%7Ccolor:0x8e4e1a%7Clabel:1%7Cbay%20shore%20bean"
+              src="https://maps.googleapis.com/maps/api/staticmap?center=bay+shore+bean&zoom=13&scale=2&size=400x200&maptype=roadmap&format=png&key={API__KEY}&markers=size:mid%7Ccolor:0x8e4e1a%7Clabel:1%7Cbay%20shore%20bean"
               alt="Google map of bay shore bean"
             />
           </div>
