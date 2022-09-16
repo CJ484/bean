@@ -7,13 +7,10 @@ import conferance from "./Images/Conferance.jpg"
 import localArtist from "./Images/anotherOpenMic.jpg"
 import bake from "./Images/bakeContest.jpg"
 import culture from "./Images/worldCoffee.jpg"
-import bean2 from "./Images/BayShoreBean.png"
-import wifi from "./Images/freeWifi.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faChevronLeft, fa } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React, { useEffect } from 'react';
-// import GoogleAPI from "./Components/googleMaps"
 
 let i;
 let slideIndex = 1;
@@ -59,18 +56,10 @@ function App() {
     <div>
       <div className="social">
         <h6>Catch us on Social Media:</h6>
-        <a data-hover="Facebook">
-          <FontAwesomeIcon icon={faFacebook} />
-        </a>
-        <a data-hover="Instagram">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a data-hover="Twitter">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <a data-hover="TikTok">
-          <FontAwesomeIcon icon={faTiktok} />
-        </a>
+        <a data-hover="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a data-hover="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
+        <a data-hover="Twitter"><FontAwesomeIcon icon={faTwitter}/></a>
+        <a data-hover="TikTok"><FontAwesomeIcon icon={faTiktok}/></a>
       </div>
       <nav>
         <ul>
@@ -144,9 +133,9 @@ function App() {
             <h5>Private Conference</h5>
             <img src={conferance} alt="Studying conferance table" />
           </div>
-          <h6 className="textBox">
-            Schedule your next study group or business meeting in our large
-            sitting table. Our stress free enviroment gives a change of scenary
+          <h6 className='textBox'>
+            Schedule your next study group or business meeting in our
+            large sitting table. Our stress free enviroment gives a change of scenary
             to help a new perspective.
           </h6>
         </div>
