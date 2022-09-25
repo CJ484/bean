@@ -18,7 +18,8 @@ body {
 
 .social h6 {
   margin: 0;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
+  color: #ffcc8d;
 }
 
 .social a {
@@ -26,10 +27,11 @@ body {
   cursor: pointer;
   transition: all ease-in-out 250ms;
   margin: 0 0 0 25px;
+  color: #ffcc8d;
 }
 
 .social a:before {
-  background-color: #414f69;
+  background-color: #695641;
   border-radius: 5px;
   content: attr(data-hover);
   visibility: hidden;
@@ -51,7 +53,7 @@ body {
 }
 
 .social a:hover {
-  color: #d1d1d1;
+  color: #a4b3f7;
 }
 
 nav {
@@ -236,8 +238,10 @@ nav ul li:hover::after {
   z-index: 1;
 }
 
-.test:hover {
-  width: 540px;
+@media (hover: hover) {
+  .test:hover {
+    width: 540px;
+  }
 }
 
 .cubeInfo {
@@ -313,18 +317,49 @@ nav ul li:hover::after {
   border-radius: 8px;
 }
 
+/* upper footer */
+
+.top-footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #986300;
+  padding: 40px 0;
+}
+
+.top-footer h5 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.topFooterChild {
+  margin-left: 25px;
+}
+
+.map img {
+  width: 300px;
+  height: 300px;
+}
+
+.wifiPic {
+  width: 300px;
+  height: 300px;
+}
+
+
+
 /* Footer */
 
 footer {
   margin: 0;
   padding: 20px;
-  background-color:#986300;
+  background-color:#ffd094;
 }
 
 footer h5 {
   margin: 0 0 0 60px;
+  color: #05204c;
 }
-
 
 /* mobile exception */
 
@@ -351,7 +386,13 @@ footer h5 {
     flex-direction: column;
   }
 
+  .thirdSection {
+    width: 90%;
+  }
+
   .thirdSection h2 {
     font-size: 1.5rem;
   }
+
+  
 }
