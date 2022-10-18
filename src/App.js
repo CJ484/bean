@@ -117,7 +117,7 @@ function App() {
         <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
       <div className="secondSection">
-        <div className="test">
+        <div className="test noHover">
           <div className="cubeInfo">
             <h5>Local Artist</h5>
             <img src={localArtist} alt="local artist singing" />
@@ -127,7 +127,7 @@ function App() {
             rest of our local community!
           </h6>
         </div>
-        <div className="test">
+        <div id="test" className="test noHover">
           <div className="cubeInfo">
             <img src={bake} alt="Backing contest" />
             <h5>Bake Contest</h5>
@@ -138,7 +138,7 @@ function App() {
             Bring your best dessert!
           </h6>
         </div>
-        <div className="test">
+        <div className="test noHover">
           <div className="cubeInfo">
             <h5>Private Conference</h5>
             <img src={conferance} alt="Studying conferance table" />

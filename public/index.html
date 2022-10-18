@@ -25,6 +25,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      function screenSize() {
+
+        if($(window).width() > 1508) {
+          console.log("monitor size activated");
+          $(".noHover").removeClass("noHover");
+        } else if($(window).width() < 1508) {
+          console.log("mobile screen activated");
+          $(".test").addClass("noHover");
+        }
+      }
+      screenSize();
+
+      $(window).bind('resize',function(){
+        screenSize();
+      });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
