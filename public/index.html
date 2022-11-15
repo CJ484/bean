@@ -30,17 +30,25 @@
       function screenSize() {
 
         if($(window).width() > 1508) {
-          console.log("monitor size activated");
           $(".noHover").removeClass("noHover");
         } else if($(window).width() < 1508) {
-          console.log("mobile screen activated");
           $(".test").addClass("noHover");
         }
       }
-      screenSize();
+      
+      function showMenu() {
+        if($(window).width() > 560) {
+          $(".mobileMenu").addClass('hideMenu')
+          $(".regularMenu").removeClass("hideMenu");
+        } else if($(window).width() < 560) {
+          $(".mobileMenu").removeClass("hideMenu");
+          $(".regularMenu").addClass('hideMenu')
+        }
+      }
 
       $(window).bind('resize',function(){
         screenSize();
+        showMenu();
       });
     </script>
   </head>
