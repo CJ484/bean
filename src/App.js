@@ -10,7 +10,7 @@ import culture from "./Images/worldCoffee.jpg"
 import wifi from './Images/freeWifi.png';
 import bean2 from './Images/BayShoreBean.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faChevronLeft, faBars } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React, { useEffect } from 'react';
 
@@ -45,6 +45,15 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+  function viewMenu() {
+    const menu = document.querySelector(".links");
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+
 
 const useIt = () => {
   useEffect(() => {
@@ -71,7 +80,7 @@ function App() {
           <FontAwesomeIcon icon={faTiktok} />
         </a>
       </div>
-      <nav>
+      <nav className='regularMenu'>
         <ul>
           <li>
             <a>Home</a>
@@ -88,11 +97,27 @@ function App() {
           </li>
         </ul>
       </nav>
+      <nav className='mobileMenu hideMenu'>      
+        <div className='heading'>
+          <div>
+            <img src={bean} alt="coffee" />
+            <a href="#home">The Bean of Patchogue</a>
+          </div>
+          <a onClick={() => viewMenu()}>
+            <FontAwesomeIcon icon={faBars} />
+          </a>
+        </div>
+        <div className='links'>
+          <a href='#gfg1'>Menu</a>
+          <a href='#gfg1'>Locations</a>
+          <a href='#gfg1'>About Us</a>
+        </div>
+      </nav>
       <div className="firstSection">
         <div className="mySlides fade">
           <div className="numberText">1 / 3</div>
           <img src={buy3} alt="buy3get1" />
-          <h3 className="text">Nobody likes monday's so we made it better</h3>
+          <h3 className="text">Nobody likes monday's, so we made it better</h3>
         </div>
         <div className="mySlides fade">
           <div className="numberText">2 / 3</div>
@@ -117,7 +142,7 @@ function App() {
         <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
       <div className="secondSection">
-        <div className="test noHover">
+        <div className="test">
           <div className="cubeInfo">
             <h5>Local Artist</h5>
             <img src={localArtist} alt="local artist singing" />
@@ -127,7 +152,7 @@ function App() {
             rest of our local community!
           </h6>
         </div>
-        <div id="test" className="test noHover">
+        <div className="test">
           <div className="cubeInfo">
             <img src={bake} alt="Backing contest" />
             <h5>Bake Contest</h5>
@@ -138,7 +163,7 @@ function App() {
             Bring your best dessert!
           </h6>
         </div>
-        <div className="test noHover">
+        <div className="test">
           <div className="cubeInfo">
             <h5>Private Conference</h5>
             <img src={conferance} alt="Studying conferance table" />

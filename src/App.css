@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Schoolbell&display=swap');
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: #fbe8cd;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #64471b;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
 
 body {
   /* background-color: #ffeeda; */
@@ -54,6 +70,10 @@ body {
 
 .social a:hover {
   color: #a4b3f7;
+}
+
+.hideMenu {
+  display: none;
 }
 
 nav {
@@ -285,10 +305,6 @@ nav ul li:hover::after {
   right: 20px;
 }
 
-/* .test:hover + .textBox {
-  visibility: visible;
-} */
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -361,20 +377,53 @@ footer h5 {
   color: #05204c;
 }
 
+.noHover {
+  pointer-events: none;
+}
+
 /* mobile exception */
+/* The media query is designed to share with TABLET and PHONE sized screens to share but NOT TO MONITORS screens */
 
 @media only screen and (max-width: 1508px) {
+
+  body {
+    width: 100%;
+  }
+
+  .social h6 {
+    display: none;
+  }
+
+  .social {
+    justify-content: space-evenly;
+  }
+
+  .social a {
+    font-size: 2.0rem;
+  }
+
+  nav ul img {
+    height: 100px;
+  }
+
+  .firstSection {
+    width: 97%;
+  }
   
   .test {
     margin-bottom: 20px;
+    height: 500px;
+    position: relative;
+    flex-direction: column;
   }
 
   .cubeInfo {
-    min-height: 200px;
+    /* min-height: 200px;
     min-width: 200px;
     max-width: 201px;
-    max-height: 201px;
+    max-height: 201px; */
     border-radius: 28px;
+    position: relative;
   }
 
   .cubeInfo img {
@@ -382,8 +431,15 @@ footer h5 {
     height: 200px;
   }
 
+  .textBox {
+    position: relative;
+    margin: 25px 0 0 20px;
+    text-align: center;
+  }
+
   .secondSection {
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
   }
 
   .thirdSection {
@@ -391,8 +447,130 @@ footer h5 {
   }
 
   .thirdSection h2 {
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 1.3rem;
+    text-align: center;
   }
 
+  .bean2 {
+    width: 200px;
+  }
+
+  .wifiPic {
+    width: 235px;
+    height: 235px;
+  }
+}
+
+/* This media query will be for TABLETS and PHONE screens to share */
+@media only screen and (max-width: 1030px) {
+  .top-footer {
+    flex-direction: row;
+    height: auto;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .cubeInfo {
+    width: 308px;
+    height: 308px;
+  }
+}
+
+
+/* This media query will ONLY be targeted for TABLET screens only and not phone or monitors */
+@media only screen and (max-width: 1030px) and (min-width: 751px) {
   
+  nav ul {
+    padding: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .textBox {
+    max-width: 264px;
+  }
+}
+
+/* This media query I have targeted for PHONE screens ONLY that would not share tablet size or monitor sizes */
+@media only screen and (max-width: 560px) {
+  
+  .mobileMenu {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #f9ce78;
+  }
+
+  .heading div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading a:nth-child(2) {
+    color: rgb(8, 36, 130);
+    text-decoration: none;
+    font-size: 27px;
+    display: block;
+    padding: 7px;
+  }
+
+  .heading a svg {
+    color: rgb(170, 113, 27);
+    /* background-color: #fac780;
+    border: 2px solid #986300;
+    border-radius: 5px; */
+    padding: 10px;
+    display: block;
+    font-size: 35px;
+  }
+
+  .heading div img {
+    width: 60px;
+  }
+
+  .links {
+    display: none;
+    background-color: rgb(255, 239, 205);
+  }
+  
+  .links a:nth-child(odd) {
+    background-color: #fecc82;
+  }
+
+  .links a {
+    color: rgb(187, 121, 50);
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    text-align: center;
+    border-bottom: 3px solid rgb(248, 189, 94);
+  }
+
+  .links a:hover {
+    background-color: rgb(254, 171, 83);
+    color: white;
+  }
+
+  .secondSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-footer {
+        flex-direction: column;
+  }
 }
